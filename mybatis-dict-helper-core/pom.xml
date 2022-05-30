@@ -10,8 +10,8 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <name>mybatis-dict-helper</name>
-    <description>mybatis-dict-helper</description>
+    <name>mybatis-dict-helper-core</name>
+    <description>mybatis-dict-helper-core</description>
     <artifactId>mybatis-dict-helper-core</artifactId>
 
     <dependencies>
