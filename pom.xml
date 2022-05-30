@@ -13,6 +13,7 @@
     <description>mybatis-dict-helper</description>
     <url>https://github.com/codingxxm/mybatis-dict-helper</url>
 
+
     <modules>
         <module>mybatis-dict-helper-core</module>
         <module>mybatis-dict-helper-boot-starter</module>
@@ -28,4 +29,93 @@
         <slf4j-api.version>1.7.36</slf4j-api.version>
     </properties>
 
+    <licenses>
+        <license>
+            <name>The Apache Software License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+            <comments>A business-friendly OSS license</comments>
+        </license>
+    </licenses>
+
+    <scm>
+        <tag>main</tag>
+        <url>https://github.com/codingxxm/mybatis-dict-helper.git</url>
+        <connection>scm:git:https://github.com/codingxxm/mybatis-dict-helper.git</connection>
+        <developerConnection>scm:git:git@github.com:codingxxm/mybatis-dict-helper.git</developerConnection>
+    </scm>
+
+    <developers>
+        <developer>
+            <name>codingxxm</name>
+            <email>xxm-job@foxmail.com</email>
+            <url>codingxxm.cn</url>
+        </developer>
+    </developers>
+
+
+   <build>
+       <plugins>
+           <!-- Source -->
+           <plugin>
+               <groupId>org.apache.maven.plugins</groupId>
+               <artifactId>maven-source-plugin</artifactId>
+               <version>3.2.1</version>
+               <executions>
+                   <execution>
+                       <phase>package</phase>
+                       <goals>
+                           <goal>jar-no-fork</goal>
+                       </goals>
+                   </execution>
+               </executions>
+           </plugin>
+           <!-- Javadoc -->
+           <plugin>
+               <groupId>org.apache.maven.plugins</groupId>
+               <artifactId>maven-javadoc-plugin</artifactId>
+               <version>3.4.0</version>
+               <executions>
+                   <execution>
+                       <phase>package</phase>
+                       <goals>
+                           <goal>jar</goal>
+                       </goals>
+                       <configuration>
+                           <doclint>none</doclint>
+                       </configuration>
+                   </execution>
+               </executions>
+           </plugin>
+           <!-- GPG -->
+           <plugin>
+               <groupId>org.apache.maven.plugins</groupId>
+               <artifactId>maven-gpg-plugin</artifactId>
+               <version>1.6</version>
+               <configuration>
+                   <useAgent>false</useAgent>
+               </configuration>
+               <executions>
+                   <execution>
+                       <phase>verify</phase>
+                       <goals>
+                           <goal>sign</goal>
+                       </goals>
+                   </execution>
+               </executions>
+           </plugin>
+           <!-- Nexus Staging Maven -->
+           <plugin>
+               <groupId>org.sonatype.plugins</groupId>
+               <artifactId>nexus-staging-maven-plugin</artifactId>
+               <version>1.6.7</version>
+               <extensions>true</extensions>
+               <configuration>
+                   <serverId>oss</serverId>
+                   <nexusUrl>https://s01.oss.sonatype.org/</nexusUrl>
+                   <autoReleaseAfterClose>true</autoReleaseAfterClose>
+               </configuration>
+           </plugin>
+       </plugins>
+   </build>
 </project>

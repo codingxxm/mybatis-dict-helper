@@ -1,2 +1,2 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-  cn.xxm.mybatis.dict.helper.autoconfigure.MybatisDictHelperAutoConfiguration
+  cn.codingxxm.mybatis.dict.helper.autoconfigure.MybatisDictHelperAutoConfiguration

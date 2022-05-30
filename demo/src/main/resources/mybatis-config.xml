@@ -4,7 +4,7 @@
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
     <plugins>
-        <plugin interceptor="cn.xxm.mybatis.dict.helper.interceptor.HandleDictInterceptor"></plugin>
+        <plugin interceptor="cn.codingxxm.mybatis.dict.helper.interceptor.HandleDictInterceptor"></plugin>
     </plugins>
 
     <environments default="development">
