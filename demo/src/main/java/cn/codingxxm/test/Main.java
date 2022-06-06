@@ -8,15 +8,20 @@ import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.InputStream;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 public class Main {
 
-    public static void main(String[] args) throws InterruptedException {
-        InputStream resourceAsStream = Main.class.getClassLoader().getResourceAsStream("mybatis-config.xml");
-        SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(resourceAsStream);
+    public static void main(String[] args) throws InterruptedException, FileNotFoundException {
+        //InputStream resourceAsStream = Main.class.getClassLoader().getResourceAsStream("/Users/xiaoming/Documents/git/mybatis-dict-helper/demo/src/main/resources/mybatis-config.xml");
+        File file = new File("/Users/xiaoming/Documents/git/mybatis-dict-helper/demo/src/main/resources/mybatis-config.xml");
+        FileInputStream inputStream = new FileInputStream(file);
+        SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
 
         HandlerDispatcher.setSqlSessionFactory(sqlSessionFactory);
         SysConfig sysConfig = new SysConfig();

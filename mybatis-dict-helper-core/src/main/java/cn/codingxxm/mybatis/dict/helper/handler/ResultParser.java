@@ -30,13 +30,13 @@ public class ResultParser {
     private void doHandle(Object resultObject) throws IllegalAccessException {
         Field[] fields = resultObject.getClass().getDeclaredFields();
         for (Field field : fields) {
+            if (Objects.isNull(field)) {
+                continue;
+            }
             Dict annotation = field.getDeclaredAnnotation(Dict.class);
             if (annotation != null) {
                 field.setAccessible(true);
                 Object fieldValue = field.get(resultObject);
-                if (Objects.isNull(field)) {
-                    continue;
-                }
                 String property = annotation.property();
                 String column = annotation.column();
                 String table = annotation.table();

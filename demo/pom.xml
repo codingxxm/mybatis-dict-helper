@@ -3,17 +3,21 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
+    <parent>
+        <artifactId>mybatis-dict-helper</artifactId>
+        <groupId>cn.codingxxm</groupId>
+        <version>0.1.1-RELEASE</version>
+    </parent>
     <groupId>cn.codingxxm</groupId>
     <modelVersion>4.0.0</modelVersion>
 
-    <version>0.1-SNAPSHOT</version>
     <artifactId>demo</artifactId>
 
     <dependencies>
         <dependency>
             <groupId>cn.codingxxm</groupId>
             <artifactId>mybatis-dict-helper-core</artifactId>
-            <version>0.1-SNAPSHOT</version>
+            <version>0.1.1-RELEASE</version>
         </dependency>
 
         <dependency>
