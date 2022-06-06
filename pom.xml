@@ -7,7 +7,7 @@
     <groupId>cn.codingxxm</groupId>
     <artifactId>mybatis-dict-helper</artifactId>
     <packaging>pom</packaging>
-    <version>0.1.1-RELEASE</version>
+    <version>0.1.2-RELEASE</version>
 
     <name>${project.artifactId}</name>
     <description>mybatis-dict-helper</description>
