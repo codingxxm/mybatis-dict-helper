@@ -6,7 +6,7 @@
     <parent>
         <artifactId>mybatis-dict-helper</artifactId>
         <groupId>cn.codingxxm</groupId>
-        <version>0.1.1-RELEASE</version>
+        <version>0.1.3-RELEASE</version>
     </parent>
     <groupId>cn.codingxxm</groupId>
     <modelVersion>4.0.0</modelVersion>
