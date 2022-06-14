@@ -19,8 +19,16 @@ A mybatis plugin to solve dictionary functionality
 | SpringBoot集成使用 | 支持 |
 
 
+### 使用说明
+
+
+
+#### 非Spring项目使用
+
+#### SpringBoot项目使用
+
+
 ### todo
 LRU、LFU...等等
 
-### 使用说明
-待上架maven后再给出
+

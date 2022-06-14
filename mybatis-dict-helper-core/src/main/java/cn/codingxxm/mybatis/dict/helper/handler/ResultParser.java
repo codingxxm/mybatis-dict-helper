@@ -1,12 +1,13 @@
 package cn.codingxxm.mybatis.dict.helper.handler;
 
 import cn.codingxxm.mybatis.dict.helper.anno.Dict;
+import cn.hutool.core.text.CharSequenceUtil;
+import cn.hutool.core.util.ObjectUtil;
 import org.apache.ibatis.reflection.MetaObject;
 import org.apache.ibatis.reflection.SystemMetaObject;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;
-import java.util.Objects;
 
 public class ResultParser {
 
@@ -34,14 +35,14 @@ public class ResultParser {
             if (annotation != null) {
                 field.setAccessible(true);
                 Object fieldValue = field.get(resultObject);
-                if (Objects.isNull(fieldValue)) {
-                    continue;
-                }
                 String property = annotation.property();
                 String column = annotation.column();
                 String table = annotation.table();
                 String conditions = annotation.condition();
                 String text = annotation.text();
+                if (ObjectUtil.isEmpty(fieldValue) || CharSequenceUtil.hasBlank(property, column, table, text)) {
+                    continue;
+                }
                 MetaObject metaObject = SystemMetaObject.forObject(resultObject);
                 HandlerDispatcher dispatcher = new HandlerDispatcher(property, text, column, table, conditions, metaObject, fieldValue);
                 dispatcher.dispatch();

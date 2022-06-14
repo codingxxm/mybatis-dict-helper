@@ -7,7 +7,7 @@
     <groupId>cn.codingxxm</groupId>
     <artifactId>mybatis-dict-helper</artifactId>
     <packaging>pom</packaging>
-    <version>0.1.3-RELEASE</version>
+    <version>0.1.4-RELEASE</version>
 
     <name>${project.artifactId}</name>
     <description>mybatis-dict-helper</description>
@@ -17,6 +17,7 @@
     <modules>
         <module>mybatis-dict-helper-core</module>
         <module>mybatis-dict-helper-boot-starter</module>
+        <module>no-spring-demo</module>
     </modules>
     <properties>
         <java.version>8</java.version>
@@ -27,6 +28,7 @@
         <spring-boot.version>2.3.7.RELEASE</spring-boot.version>
         <mybatis.version>3.5.9</mybatis.version>
         <slf4j-api.version>1.7.36</slf4j-api.version>
+        <hu-tool.version>5.8.1</hu-tool.version>
     </properties>
 
     <licenses>
